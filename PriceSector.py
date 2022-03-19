@@ -15,7 +15,8 @@ class PriceSector:
         self.conn = conndb.get_collection(collection)
 
         # 为了方便查找，从数据库把所有交易日全读出来
-        re = conndb.get_collection('tradedays').find(projection={"_id": 0})
+        re = conndb.get_collection('tradedays').find(projection={"_id": 0},
+                                                     cursor_type=pymongo.cursor.CursorType.EXHAUST)
         self.tradedays = pd.DataFrame(data=[*re])
 
     def get_price(self, secs: list, start_date=None, end_date=None, count=None, fields=None, raw=False, fq=True):

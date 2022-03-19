@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/neodb.iml" filepath="$PROJECT_DIR$/.idea/neodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/backtest.iml" filepath="$PROJECT_DIR$/.idea/backtest.iml" />
     </modules>
   </component>
 </project>
